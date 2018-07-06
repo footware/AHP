@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <script type="text/javascript" src="test.js"></script>
+    <title>AHP site ver.1</title>
+</head>
+<body>
+    <form name="js">
+        <h1>Test Site</h1>
+        <table>
+
+            <tr>
+                <th>最終目標：</th>
+                <td><input name="goal" value="test1"></td>
+            </tr>
+            <tr>
+                <th>評価基準：</th>
+                <td><input id="criteria1" value="a"></td>
+                <td><input id="criteria2" value="b"></td>
+                <td><input id="criteria3" value="c"></td>
+            </tr>
+            <tr>
+                <th>代替案：</th>
+                <td><input name="alternative1"></td>
+                <td><input name="alternative2"></td>
+                <td><input name="alternative3"></td>
+            </tr>
+
+        </table>
+
+        <button type="button" onclick="test()">アンケート作成</button>
+
+    </form>
+</body>
+</html>
