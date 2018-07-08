@@ -1,9 +1,22 @@
 function test() {
-    var data = makeData();
-    var table = makeTable(data);
-    var button = makeButton();
-    document.body.appendChild(table);
-    document.body.appendChild(button);
+	var divobj = document.getElementById("criteriadiv");
+	if(divobj == null){
+		 divobj = insertDiv();
+
+	}
+	var data = makeData();
+	var table = makeTable(data);
+	var button = makeButton();
+    divobj.innerHTML = table.outerHTML;
+    divobj.insertBefore(button, table.nextSibling);
+}
+
+function insertDiv(){
+		newdiv = document.createElement("div");
+		newdiv.setAttribute("id", "criteriadiv");
+		document.body.appendChild(newdiv);
+
+		return newdiv;
 }
 
 function makeButton() {
